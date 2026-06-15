@@ -362,6 +362,7 @@ func _process(delta: float) -> void:
 	_follow_camera(delta)
 	post_mat.set_shader_parameter("time_val", Time.get_ticks_msec() * 0.001)
 	_update_emp()
+	_update_guard_visibility()
 
 	var maxd := _max_detection()
 	if audio:
@@ -550,6 +551,22 @@ func _apply_vision_mode() -> void:
 		g.call("set_vision_mode", vision_mode)
 	if player:
 		player.call("set_vision_mode", vision_mode)
+	_update_guard_visibility()
+
+
+func _update_guard_visibility() -> void:
+	if player == null:
+		return
+	var thermal := vision_mode == 2
+	var eye: Vector3 = player.global_position + Vector3(0, 1.0, 0)
+	for g in guards:
+		if not is_instance_valid(g):
+			continue
+		var seen := thermal
+		if not seen:
+			var target: Vector3 = g.global_position + Vector3(0, 1.0, 0)
+			seen = has_los(eye, target)
+		g.call("set_player_visible", seen, thermal)
 
 
 # ---------------------------------------------------------------------------

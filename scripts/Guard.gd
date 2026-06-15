@@ -38,11 +38,28 @@ func _ready() -> void:
 	_view_cos = cos(deg_to_rad(VIEW_HALF_ANGLE))
 	_build_visuals()
 	_build_audio()
-	if waypoints.size() > 0:
-		var d: Vector3 = waypoints[0] - global_position
+	_align_to_patrol()
+
+
+## Skip waypoints we're already standing on and face the next leg of the route.
+## Many levels put start on route[0], which left guards at default rotation (+Z)
+## staring at whatever wall happened to be in front of them.
+func _align_to_patrol() -> void:
+	if waypoints.is_empty():
+		return
+	var start_i := wp_index
+	for _i in range(waypoints.size()):
+		var d: Vector3 = waypoints[wp_index] - global_position
 		d.y = 0
-		if d.length() > 0.01:
-			rotation.y = atan2(d.x, d.z)
+		if d.length() >= 0.5:
+			break
+		wp_index = (wp_index + 1) % waypoints.size()
+		if wp_index == start_i:
+			break
+	var to_next: Vector3 = waypoints[wp_index] - global_position
+	to_next.y = 0
+	if to_next.length() > 0.01:
+		rotation.y = atan2(to_next.x, to_next.z)
 
 
 func _build_visuals() -> void:
@@ -247,6 +264,10 @@ func _update_cone_color() -> void:
 	cone_mat.albedo_color = c
 	if eye:
 		eye.light_color = Color(c.r, c.g, c.b) * 0.7 + Color(0.5, 0.5, 0.5)
+
+
+func set_player_visible(visible_to_player: bool, thermal: bool) -> void:
+	visible = thermal or visible_to_player
 
 
 func set_vision_mode(mode: int) -> void:
