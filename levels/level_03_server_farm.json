@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "Server Farm",
+  "meta": {
+    "author": "Claude",
+    "prompt": "Rows of server racks form dim aisles you weave through; the data terminal sits in a small room at the back behind a single doorway; four guards pace the aisles and the perimeter.",
+    "model": "hand-designed"
+  },
+  "bounds": [40, 28],
+  "player_start": [3, 4],
+  "terminal": [20, 24],
+  "extraction": [37, 4],
+  "config": { "emp_charges": 3, "hack_time": 2.8 },
+  "walls": [
+    [12, 21, 18, 21],
+    [22, 21, 28, 21],
+    [12, 21, 12, 28],
+    [28, 21, 28, 28]
+  ],
+  "cover": [
+    [10, 8], [14, 8], [18, 8], [22, 8], [26, 8], [30, 8],
+    [10, 14], [14, 14], [18, 14], [22, 14], [26, 14], [30, 14]
+  ],
+  "lights": [
+    { "pos": [20, 24], "range": 6.5, "energy": 2.4, "color": [0.8, 0.95, 1.0] },
+    { "pos": [14, 11], "range": 5.5, "energy": 1.9, "color": [0.9, 0.95, 1.0] },
+    { "pos": [26, 11], "range": 5.5, "energy": 1.9, "color": [1.0, 0.92, 0.8] },
+    { "pos": [6, 5],   "range": 5.5, "energy": 1.9, "color": [1.0, 0.9, 0.7] }
+  ],
+  "guards": [
+    { "start": [8, 11],  "route": [[8, 11], [32, 11]], "view_distance": 9.0, "speed": 2.3 },
+    { "start": [32, 17], "route": [[32, 17], [8, 17]], "view_distance": 9.0, "speed": 2.3 },
+    { "start": [16, 18], "route": [[16, 18], [24, 18], [24, 20], [16, 20]], "view_distance": 9.0, "speed": 2.2 },
+    { "start": [36, 6],  "route": [[36, 6], [36, 24], [33, 24], [33, 6]], "view_distance": 9.0, "speed": 2.4 }
+  ]
+}

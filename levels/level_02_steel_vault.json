@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "Steel Vault",
+  "meta": {
+    "author": "Claude",
+    "prompt": "A small, tense heist: a brightly lit central vault holding the data terminal, ringed by dark corridors, with three guards circling the vault.",
+    "model": "hand-designed"
+  },
+  "bounds": [36, 26],
+  "player_start": [3, 3],
+  "terminal": [18, 13],
+  "extraction": [33, 23],
+  "config": { "emp_charges": 3, "hack_time": 2.6 },
+  "walls": [
+    [14, 10, 17, 10],
+    [19, 10, 22, 10],
+    [14, 16, 22, 16],
+    [14, 10, 14, 16],
+    [22, 10, 22, 16]
+  ],
+  "cover": [
+    [12, 8], [24, 8], [12, 18], [24, 18], [8, 13], [28, 13]
+  ],
+  "lights": [
+    { "pos": [18, 13], "range": 7.0, "energy": 2.7, "color": [1.0, 0.9, 0.65] },
+    { "pos": [5, 5],   "range": 6.0, "energy": 2.0, "color": [0.9, 0.95, 1.0] },
+    { "pos": [31, 21], "range": 6.0, "energy": 2.0, "color": [1.0, 0.9, 0.7] },
+    { "pos": [6, 21],  "range": 5.5, "energy": 1.8, "color": [0.9, 0.92, 1.0] }
+  ],
+  "guards": [
+    { "start": [12, 8], "route": [[12, 8], [24, 8], [24, 18], [12, 18]], "view_distance": 9.0, "speed": 2.4 },
+    { "start": [6, 12], "route": [[6, 12], [13, 12], [13, 6], [6, 6]],   "view_distance": 9.0, "speed": 2.2 },
+    { "start": [30, 6], "route": [[30, 6], [30, 20], [26, 20], [26, 6]], "view_distance": 9.0, "speed": 2.4 }
+  ]
+}

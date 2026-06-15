@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "Detention Block",
+  "meta": {
+    "author": "Claude",
+    "prompt": "Rows of cells above and below a single brightly lit east-west corridor. The warden's office (terminal) is at the far east; guards pace the corridor, so duck into the dark cells to break line of sight.",
+    "model": "hand-designed"
+  },
+  "bounds": [38, 30],
+  "player_start": [3, 15],
+  "terminal": [33, 24],
+  "extraction": [4, 26],
+  "config": { "emp_charges": 3, "hack_time": 2.6 },
+  "walls": [
+    [10, 17, 10, 30],
+    [20, 17, 20, 30],
+    [28, 17, 28, 30],
+    [10, 0, 10, 13],
+    [20, 0, 20, 13],
+    [28, 0, 28, 13]
+  ],
+  "cover": [
+    [5, 22], [15, 22], [24, 22], [33, 8], [15, 6], [5, 6]
+  ],
+  "lights": [
+    { "pos": [8, 15],  "range": 6.0, "energy": 2.2, "color": [1.0, 0.92, 0.8] },
+    { "pos": [19, 15], "range": 6.0, "energy": 2.2, "color": [0.9, 0.95, 1.0] },
+    { "pos": [30, 15], "range": 6.0, "energy": 2.2, "color": [1.0, 0.9, 0.7] },
+    { "pos": [33, 24], "range": 5.5, "energy": 2.4, "color": [1.0, 0.92, 0.7] }
+  ],
+  "guards": [
+    { "start": [5, 15],  "route": [[5, 15], [33, 15]],  "view_distance": 9.0, "speed": 2.4 },
+    { "start": [33, 15], "route": [[33, 15], [19, 15]], "view_distance": 9.0, "speed": 2.3 },
+    { "start": [31, 18], "route": [[31, 18], [31, 27], [35, 27], [35, 18]], "view_distance": 9.0, "speed": 2.3 }
+  ]
+}

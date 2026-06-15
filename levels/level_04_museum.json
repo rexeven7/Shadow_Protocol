@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "Museum After Hours",
+  "meta": {
+    "author": "Claude",
+    "prompt": "A large open exhibition hall lit by scattered spotlights on the displays, with a side gallery housing the terminal. Four guards roam wide across the long sightlines - bring the EMP.",
+    "model": "hand-designed"
+  },
+  "bounds": [44, 30],
+  "player_start": [4, 4],
+  "terminal": [6, 26],
+  "extraction": [40, 27],
+  "config": { "emp_charges": 3, "hack_time": 2.6 },
+  "walls": [
+    [8, 22, 10, 22],
+    [13, 22, 16, 22],
+    [16, 22, 16, 30]
+  ],
+  "cover": [
+    [20, 10], [28, 8], [34, 14], [24, 18], [30, 22], [14, 12], [38, 8], [20, 24], [34, 26]
+  ],
+  "lights": [
+    { "pos": [7, 26],  "range": 6.0, "energy": 2.4, "color": [1.0, 0.92, 0.7] },
+    { "pos": [20, 10], "range": 5.0, "energy": 2.2, "color": [1.0, 0.95, 0.8] },
+    { "pos": [28, 8],  "range": 5.0, "energy": 2.2, "color": [0.95, 0.95, 1.0] },
+    { "pos": [34, 14], "range": 5.5, "energy": 2.2, "color": [1.0, 0.9, 0.7] },
+    { "pos": [24, 18], "range": 5.0, "energy": 2.0, "color": [0.9, 0.95, 1.0] },
+    { "pos": [30, 22], "range": 5.5, "energy": 2.2, "color": [1.0, 0.92, 0.75] }
+  ],
+  "guards": [
+    { "start": [10, 8],  "route": [[10, 8], [38, 8]],  "view_distance": 10.0, "speed": 2.6 },
+    { "start": [38, 14], "route": [[38, 14], [10, 14]], "view_distance": 10.0, "speed": 2.6 },
+    { "start": [12, 24], "route": [[12, 24], [12, 18], [22, 18], [22, 24]], "view_distance": 9.0, "speed": 2.4 },
+    { "start": [40, 26], "route": [[40, 26], [40, 6], [34, 6], [34, 26]], "view_distance": 10.0, "speed": 2.6 }
+  ]
+}

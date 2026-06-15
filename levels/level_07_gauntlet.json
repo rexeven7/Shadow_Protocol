@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "name": "The Gauntlet",
+  "meta": {
+    "author": "Claude",
+    "prompt": "Five lit rooms in a line, each separated by a wall with a single doorway that alternates top and bottom so you must weave. One guard per room watches its doorway; the terminal is in room four, extraction in room five.",
+    "model": "hand-designed"
+  },
+  "bounds": [48, 24],
+  "player_start": [3, 12],
+  "terminal": [36, 12],
+  "extraction": [45, 12],
+  "config": { "emp_charges": 3, "hack_time": 2.4 },
+  "walls": [
+    [12, 0, 12, 9],
+    [12, 15, 12, 24],
+    [22, 0, 22, 15],
+    [32, 9, 32, 24],
+    [40, 0, 40, 9],
+    [40, 15, 40, 24]
+  ],
+  "cover": [
+    [8, 18], [17, 6], [27, 18], [36, 6], [44, 18]
+  ],
+  "lights": [
+    { "pos": [6, 6],   "range": 6.0, "energy": 2.0, "color": [1.0, 0.9, 0.7] },
+    { "pos": [17, 18], "range": 5.5, "energy": 2.1, "color": [0.9, 0.95, 1.0] },
+    { "pos": [27, 6],  "range": 5.5, "energy": 2.1, "color": [1.0, 0.92, 0.8] },
+    { "pos": [36, 18], "range": 6.0, "energy": 2.4, "color": [1.0, 0.9, 0.7] },
+    { "pos": [45, 8],  "range": 6.0, "energy": 2.2, "color": [0.9, 0.95, 1.0] }
+  ],
+  "guards": [
+    { "start": [5, 8],   "route": [[5, 8], [5, 16]],   "view_distance": 8.0, "speed": 2.2 },
+    { "start": [18, 18], "route": [[18, 6], [18, 18]], "view_distance": 9.0, "speed": 2.4 },
+    { "start": [27, 6],  "route": [[27, 18], [27, 6]], "view_distance": 9.0, "speed": 2.4 },
+    { "start": [36, 6],  "route": [[36, 6], [36, 18]], "view_distance": 9.0, "speed": 2.4 },
+    { "start": [45, 8],  "route": [[45, 16], [45, 8]], "view_distance": 9.0, "speed": 2.4 }
+  ]
+}

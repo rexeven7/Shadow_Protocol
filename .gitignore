@@ -1,0 +1,13 @@
+# Godot 4+ editor cache and generated files
+.godot/
+
+# Exports
+/builds/
+export_presets.cfg
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# NVIDIA shader/driver cache (created when running Godot from this folder)
+NVIDIA Corporation/

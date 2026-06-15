@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "Blackout Docks",
+  "meta": {
+    "author": "Claude",
+    "prompt": "A big, mostly dark shipping yard with shipping-container cover and long sightlines. Few lights, but the guards are fast and see far. Hack the control room in the far corner and cross the whole yard back to extract. Extra EMP charges.",
+    "model": "hand-designed"
+  },
+  "bounds": [50, 32],
+  "player_start": [4, 4],
+  "terminal": [45, 27],
+  "extraction": [4, 29],
+  "config": { "emp_charges": 4, "hack_time": 2.6 },
+  "walls": [
+    [40, 22, 44, 22],
+    [47, 22, 50, 22],
+    [40, 22, 40, 32]
+  ],
+  "cover": [
+    [12, 8], [18, 8], [24, 14], [30, 10], [36, 18], [42, 8],
+    [14, 22], [22, 24], [34, 26], [40, 16], [28, 20], [10, 16]
+  ],
+  "lights": [
+    { "pos": [10, 6],  "range": 6.0, "energy": 2.0, "color": [1.0, 0.9, 0.7] },
+    { "pos": [45, 27], "range": 6.0, "energy": 2.4, "color": [1.0, 0.92, 0.7] },
+    { "pos": [25, 16], "range": 6.0, "energy": 2.0, "color": [0.9, 0.95, 1.0] },
+    { "pos": [40, 8],  "range": 6.0, "energy": 2.0, "color": [1.0, 0.9, 0.7] }
+  ],
+  "guards": [
+    { "start": [8, 12],  "route": [[8, 12], [44, 12]], "view_distance": 12.0, "speed": 3.0 },
+    { "start": [44, 18], "route": [[44, 18], [8, 18]], "view_distance": 12.0, "speed": 3.0 },
+    { "start": [24, 6],  "route": [[24, 6], [24, 28]], "view_distance": 11.0, "speed": 2.8 },
+    { "start": [42, 24], "route": [[42, 24], [48, 24], [48, 30], [42, 30]], "view_distance": 10.0, "speed": 2.5 }
+  ]
+}
