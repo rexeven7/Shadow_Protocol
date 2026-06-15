@@ -30,7 +30,7 @@ Schema:
   "walls": [[x1,z1,x2,z2], ...],       // interior segments; LEAVE GAPS for doorways
   "cover": [[x,z], ...],               // pillars/crates for shadow & cover
   "lights": [{"pos":[x,z],"range":6.5,"energy":2.0,"color":[r,g,b]}],  // r,g,b 0..1; energy 1.5..2.8; range 5..9
-  "guards": [{"start":[x,z],"route":[[x,z],...],"view_distance":9.5,"speed":2.4}],  // 2..6 guards; route loops 2..5 pts
+  "guards": [{"start":[x,z],"route":[[x,z],...],"view_distance":9.5,"speed":2.4}],  // 2..6 guards; route loops 2..5 pts; route[0] should be the NEXT patrol point (not the spawn tile) so guards face their patrol direction on spawn
   "config": {"emp_charges":3, "hack_time":2.6}
 }
 
